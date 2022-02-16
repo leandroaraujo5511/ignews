@@ -25,6 +25,7 @@ export default NextAuth({
 
       try{
         await fauna.query(
+        
           q.If(
             q.Not(
               q.Exists(
