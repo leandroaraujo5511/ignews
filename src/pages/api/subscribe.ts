@@ -60,8 +60,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             ],
             mode: 'subscription',
             allow_promotion_codes: true,
-            success_url: 'http://localhost:3000/posts',
-            cancel_url: 'http://localhost:3000',
+            success_url: process.env.STRIPE_SUCCESS_URL,
+            cancel_url: process.env.STRIPE_CANCEL_URL,
 
         })
 
